@@ -14,4 +14,8 @@
 
 <style>
 	/*每个页面公共css */
+	@import url("./static/fonts/iconfont.css");
+	.box1 {
+		background: pink;
+	}
 </style>

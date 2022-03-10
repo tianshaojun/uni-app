@@ -20,6 +20,9 @@
 		},
 		{
 			"path": "pages/detail/detail"
+		},
+		{
+			"path": "pages/uni-style/uni-style"
 		}
 	],
 	"globalStyle": {
@@ -56,12 +59,12 @@
 			}
 		]
 	},
-	"condition":{
-		"current":0,
-		"list":[{
-			"name":"详情页",
-			"path":"pages/detail/detail",
-			"query":"id=80"
+	"condition": {
+		"current": 0,
+		"list": [{
+			"name": "详情页",
+			"path": "pages/detail/detail",
+			"query": "id=80"
 		}]
 	}
 }

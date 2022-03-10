@@ -1,1 +1,18 @@
-/* pages/detail/detail.wxss */
+
+.box {
+	width: 100px;
+	height: 100px;
+	background: green;
+}
+.box2 {
+	width: 200px;
+	height: 200px;
+	background: blue;
+}
+.box-active {
+	background: red;
+}
+.box2-active {
+	background: pink;
+}
+
