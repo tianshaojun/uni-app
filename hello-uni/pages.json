@@ -1,6 +1,19 @@
 {
 	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
 		{
+			"path": "pages/list/list",
+			"style": {
+				"enablePullDownRefresh": true,
+				"onReachBottomDistance": 200
+			}
+		},
+		{
+			"path": "pages/index/index"
+		},
+		{
+			"path": "pages/home/home"
+		},
+		{
 			"path": "pages/message/message",
 			"style": {
 				"navigationBarTitleText": "信息页",
@@ -11,9 +24,6 @@
 					}
 				}
 			}
-		},
-		{
-			"path": "pages/index/index"
 		},
 		{
 			"path": "pages/contact/contact"
