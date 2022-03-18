@@ -1,0 +1,39 @@
+<template>
+	<view>
+		首页
+	</view>
+</template>
+
+<script>
+	export default {
+		data() {
+			return {
+				swipers: []
+			}
+		},
+		onLoad() {
+			this.getSwipers();
+		},
+		methods: {
+			//获取轮播图的数据
+			getSwipers() {
+				uni.request({
+					url: 'http://localhost:8082/api/getlunbo',
+					success: res => {
+						console.log(res, '111')
+						if (res.data.status !== 0) {
+							return uni.showToast({
+								title: '获取数据失败'
+							})
+						}
+						this.swipers = res.data.message;
+					}
+				})
+			}
+		}
+	}
+</script>
+
+<style>
+
+</style>

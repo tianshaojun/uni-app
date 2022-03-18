@@ -36,11 +36,10 @@
 			},
 
 			get() {
-				console.log('000')
 				uni.request({
 					url: "http://localhost:8082/api/get",
 					success(res) {
-						console.log(res)
+						console.log(res);
 					}
 				})
 			},
