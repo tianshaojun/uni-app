@@ -1,5 +1,9 @@
 import App from './App'
 
+//全局挂载接口
+import { myRequest } from './util/api.js'
+Vue.prototype.$myRequest = myRequest
+
 // #ifndef VUE3
 import Vue from 'vue'
 Vue.config.productionTip = false
