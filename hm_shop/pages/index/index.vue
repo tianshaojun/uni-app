@@ -12,14 +12,21 @@
 				<text>{{item.title}}</text>
 			</view>
 		</view>
+		<!-- 推荐商品 -->
+		<view class="hot_goods">
+			<view class="tit">推荐商品</view>
+			<goods-list @goodsItemClick="goGoodsDetail" :goods="goods"></goods-list>
+		</view>
 	</view>
 </template>
 
 <script>
+	import goodsList from '../../components/goods-list/goods-list.vue'
 	export default {
 		data() {
 			return {
 				swipers: [],
+				goods: [],
 				navs: [{
 						icon: 'iconfont icon-ziyuan',
 						title: '黑马超市',
@@ -45,6 +52,10 @@
 		},
 		onLoad() {
 			this.getSwipers(); //获取轮播图的数据
+			this.getHotGoods(); //获取热门商品列表数据
+		},
+		components: {
+			"goods-list": goodsList
 		},
 		methods: {
 			//获取轮播图的数据
@@ -53,7 +64,21 @@
 					url: "/api/getlunbo"
 				})
 				this.swipers = res.data.message;
-			}
+			},
+			//获取热门商品列表数据
+			async getHotGoods() {
+				const res = await this.$myRequest({
+					url: '/api/getgoods?pageindex=1'
+				})
+				this.goods = res.data.message;
+			},
+			//导航点击的处理函数
+			navItemClick(url) {
+				console.log(url,'000')
+				uni.navigateTo({
+					url,
+				});
+			},
 		}
 	}
 </script>
@@ -80,7 +105,7 @@
 				view {
 					width: 120rpx;
 					height: 120rpx;
-					background: #b50e03;
+					background: $shop-color;
 					border-radius: 60rpx;
 					margin: 10px auto;
 					line-height: 120rpx;
@@ -95,6 +120,22 @@
 				text {
 					font-size: 30rpx;
 				}
+			}
+		}
+
+		.hot_goods {
+			background: #eee;
+			overflow: hidden;
+			margin-top: 10px;
+
+			.tit {
+				height: 50px;
+				line-height: 50px;
+				color: $shop-color;
+				text-align: center;
+				letter-spacing: 20px;
+				background: #fff;
+				margin: 7rpx 0;
 			}
 		}
 	}

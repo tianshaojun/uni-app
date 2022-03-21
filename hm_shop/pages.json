@@ -12,6 +12,26 @@
 		}, {
 			"path": "pages/news/news",
 			"style": {}
+		},
+		{
+			"path": "pages/goods/goods",
+			"style": {
+				"navigationBarTitleText": "商品列表",
+				"enablePullDownRefresh": true
+			}
+		}, {
+			"path": "pages/contact/contact",
+			"style": {}
+		}, {
+			"path": "pages/pics/pics",
+			"style": {
+				"navigationBarTitleText": "社区图片"
+			}
+		}, {
+			"path": "pages/videos/videos",
+			"style": {
+				"navigationBarTitleText": "学习视频"
+			}
 		}
 	],
 	"globalStyle": {
