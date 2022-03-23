@@ -32,6 +32,14 @@
 			"style": {
 				"navigationBarTitleText": "学习视频"
 			}
+		},
+		{
+			"path": "pages/news-detail/news-detail",
+			"style": {}
+		},
+		{
+			"path": "pages/goods-detail/goods-detail",
+			"style": {}
 		}
 	],
 	"globalStyle": {

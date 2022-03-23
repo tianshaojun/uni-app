@@ -74,9 +74,15 @@
 			},
 			//导航点击的处理函数
 			navItemClick(url) {
-				console.log(url,'000')
+				console.log(url, '000')
 				uni.navigateTo({
 					url,
+				});
+			},
+			//导航到商品详情页
+			goGoodsDetail(id) {
+				uni.navigateTo({
+					url: "/pages/goods-detail/goods-detail?id=" + id,
 				});
 			},
 		}

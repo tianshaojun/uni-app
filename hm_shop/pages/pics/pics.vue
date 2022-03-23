@@ -8,7 +8,7 @@
 		</scroll-view>
 		<scroll-view class="right" scroll-y>
 			<view class="item" v-for="item in secondData" :key="item.id">
-				<image @click="previewImg(item.img_url)" :src="item.img_url"></image>
+				<image @click="previewImg(item.img_url)" src="@/static/03.jpg"></image>
 				<text>{{item.title}}</text>
 			</view>
 			<text v-if="secondData.length === 0">暂无数据</text>
@@ -35,7 +35,7 @@
 			},
 			async leftClickHandle(index, id) {
 				this.active = index
-				// 获取右侧的数据
+				//获取右侧的数据
 				const res = await this.$myRequest({
 					url: '/api/getimages/' + id
 				})
@@ -43,8 +43,10 @@
 			},
 			previewImg(current) {
 				const urls = this.secondData.map(item => {
-					return item.img_url
+					// return item.img_url
+					return "@/static/03.jpg"
 				})
+				
 				uni.previewImage({
 					current,
 					urls
