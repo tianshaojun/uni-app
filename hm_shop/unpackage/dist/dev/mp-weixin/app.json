@@ -7,7 +7,9 @@
     "pages/goods/goods",
     "pages/contact/contact",
     "pages/pics/pics",
-    "pages/videos/videos"
+    "pages/videos/videos",
+    "pages/news-detail/news-detail",
+    "pages/goods-detail/goods-detail"
   ],
   "subPackages": [],
   "window": {

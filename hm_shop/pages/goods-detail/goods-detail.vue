@@ -47,13 +47,13 @@
 				info: {},
 				content: '',
 				options: [{
-					// icon: 'https://img-cdn-qiniu.dcloud.net.cn/uniapp/uni-ui/goodsnav/kefu.png',
+					icon: 'http://' + window.location.host + '/static/kefu.png',
 					text: '客服'
 				}, {
-					icon: 'https://img-cdn-qiniu.dcloud.net.cn/uniapp/uni-ui/goodsnav/dianpu.png',
+					icon: 'http://' + window.location.host + '/static/dianpu.png',
 					text: '店铺'
 				}, {
-					icon: 'https://img-cdn-qiniu.dcloud.net.cn/uniapp/uni-ui/goodsnav/carts.png',
+					icon: 'http://' + window.location.host + '/static/carts.png',
 					text: '购物车',
 					info: 12
 				}, ],

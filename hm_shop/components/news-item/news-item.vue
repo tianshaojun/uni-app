@@ -1,7 +1,7 @@
 <template>
 	<view>
 		<view class="news_item" @click="navigator(item.id)" v-for="item in list" :key="item.id">
-			<!-- <image src="@/static/news.jpg"></image> -->
+			<image src="@/static/news.jpg"></image>
 			<view class="right">
 				<view class="tit">
 					{{item.title}}
@@ -19,43 +19,48 @@
 	export default {
 		props: ['list'],
 		filters: {
-			formatDate (date) {
+			formatDate(date) {
 				const nDate = new Date(date)
 				const year = nDate.getFullYear()
-				const month = nDate.getMonth().toString().padStart(2,0)
-				const day = nDate.getDay().toString().padStart(2,0)
-				return year+'-'+month+'-'+day
+				const month = nDate.getMonth().toString().padStart(2, 0)
+				const day = nDate.getDay().toString().padStart(2, 0)
+				return year + '-' + month + '-' + day
 			}
 		},
-		methods:{
-			navigator (id) {
-				this.$emit('itemClick',id)
+		methods: {
+			navigator(id) {
+				this.$emit('itemClick', id)
 			}
 		}
 	}
 </script>
 
 <style lang="scss">
-	.news_item{
+	.news_item {
 		display: flex;
 		padding: 10rpx 20rpx;
 		border-bottom: 1px solid $shop-color;
-		image{
+
+		image {
 			min-width: 200rpx;
 			max-width: 200rpx;
 			height: 150rpx;
 		}
-		.right{
+
+		.right {
 			margin-left: 15rpx;
 			display: flex;
 			flex-direction: column;
 			justify-content: space-between;
-			.tit{
+
+			.tit {
 				font-size: 30rpx;
 			}
-			.info{
+
+			.info {
 				font-size: 24rpx;
-				text:nth-child(2){
+
+				text:nth-child(2) {
 					margin-left: 30rpx;
 				}
 			}

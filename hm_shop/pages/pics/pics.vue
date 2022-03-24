@@ -44,9 +44,8 @@
 			previewImg(current) {
 				const urls = this.secondData.map(item => {
 					// return item.img_url
-					return "@/static/03.jpg"
+					return 'http://' + window.location.host + '/static/03.jpg'
 				})
-				
 				uni.previewImage({
 					current,
 					urls
